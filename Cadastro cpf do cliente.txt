@@ -1,0 +1,28 @@
+#Abrir o putty:
+cd / WPSBrasil/script-academia
+
+#Para verificar o CPF que está dando erro no arquivo:
+cat importacao.log
+
+#Atentar para a linha 
+Erro ao incluir cpf: xxxxxxxxxxx 
+
+#Verificar se no banco de dados o CPF que está dando erro está cadastrado:
+select * from cadastroconveniocpf 
+select * from cadastroconveniocpf where cpf = ‘ ‘
+
+#Confira se o número total de registros está batendo com a quantidade de registros no banco de dados.
+
+#Para verificar se o script está rodando, execute-o:
+python batch.py
+
+#Verifique se o endereço do fpt está correto acessando o WinSCP: 
+vi batch.py
+
+ftp_host = academia.parkingplus.com.br
+ftp_user = 
+ftp_pass = 
+
+#Conectar o ftp e verificar se os dados estão inseridos corretamente, separados por  ‘ ; ’  e verificar se o cpf em questão consta no documento.
+
+#Verificar também o tipo de codificação: UTF-8
